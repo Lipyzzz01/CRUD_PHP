@@ -1,0 +1,33 @@
+tools:
+XAMPP
+
+1.Kalian Buat Koneksi terlebih dahulu(sebelum nya kalian membuat 4 variabel(localhost,username,password,db)).Contoh:
+konek = mysqli_connect(nama variabel kalian)
+
+2.Buat Form untuk email dan password dengan method post jangan lupa tambahkan variabel di akhir input untuk di tangkap data nya
+
+3.selalu tambahkan name pada setiap inputan dan submit
+
+4.tangkap data nya pakai global variabel post
+
+
+5.membuat table untuk edit database nya dengan cara:
+-) SELECT * FROM `user` WHERE 1 (angka 1 bisa di gantikan variabel id)
+-) lalu kalian query data nya dengan cara:mysqli_query(nama variabel Koneksi,nama variabel sql nya)
+
+6.membuat fitur sumbit dengan cara:
+-)UPDATE `user` SET `id`='[value-1]',`nama`='[value-2]',`email`='[value-3]' WHERE 1 (value di ganti dengan variabel yang kalian buat)
+-) lalu kalian query data nya dengan cara:mysqli_query(nama variabel Koneksi,nama variabel sql nya)
+
+7. membuat fitur read dengan cara:
+-)INSERT INTO `user`(`id`, `nama`, `email`) VALUES ('[value-1]','[value-2]','[value-3]') (value di ganti dengan variabel yang kalian buat)
+-) lalu kalian query data nya dengan cara:mysqli_query(nama variabel Koneksi,nama variabel sql nya)
+
+8.membuat fitur delete dengan cara:
+-)DELETE FROM `user` WHERE 0 (angka 0 bisa di gantikan variabel id)
+-) lalu kalian query data nya dengan cara:mysqli_query(nama variabel Koneksi,nama variabel sql nya)
+
+tips:
+kalo kalian lupa,kunjungi php MyAdmin lalu ke nama database -> nama tabel -> click bagian sql
+
+jangan lupa setelah query data kalian harus pecah lagi ke dalam fetc array
